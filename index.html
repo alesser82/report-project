@@ -14,328 +14,55 @@
     <!-- HEADER -->
     <header class="fixed-top">
         <div class="row">
-            <div class="col-12">
+            <div class="col-11">
                 <h2 class="text-uppercase text-light">Executive dashboard</h2>
-                <div class="div-back-area">
-                    <a href="" class="d-flex back-area">
-                        <div class="back-icon-area my-auto"><img src="./img/icon/back.svg" alt="back icon">
-                        </div>
-                        <div class="bd-highlight text-uppercase text-light back-text-area my-auto">back to main sheet
-                        </div>
-                    </a>
-                </div>
+            </div>
+            <div class="div-back-area">
+                <a href="" class="d-flex back-area">
+                    <div class="back-icon-area my-auto"><img src="./img/icon/back.svg" alt="back icon">
+                    </div>
+                    <div class="bd-highlight text-uppercase text-light back-text-area my-auto">back to main sheet
+                    </div>
+                </a>
             </div>
         </div>
     </header>
     <!-- END HEADER -->
 
     <!-- CONTENT -->
-    <main class="main-content py-3 px-5">
-        <!-- PROJECT MONITOR -->
-        <div class="row project-monitor">
-            <div class="col-3 bg-light px-2 py-3 mx-1">
-                <div class="text-project">
-                    <span>1222 Project</span>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-2 p-2 project-monitor-img d-flex justify-content-center">
-                        <img src="./img/icon/project.svg" alt="project icon" class="">
-                    </div>
-                    <div class="col-10 text-center">
-                        <span class="text-uppercase">12 project</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 bg-light px-2 py-3 mx-1">
-                <div class="text-project">
-                    <span>1222 Project</span>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-2 p-2 project-monitor-img d-flex justify-content-center">
-                        <img src="./img/icon/prospect.svg" alt="project icon" class="">
-                    </div>
-                    <div class="col-10 text-center">
-                        <span class="text-uppercase">12 prospect</span>
+
+    <main class="py-2">
+        <div class="container">
+            <div class="row info-project py-1">
+                <!-- INFO PROJECT -->
+
+                <div class="col-3 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-md-5 d-flex justify-content-center">
+                            <div class="icon-info d-flex justify-content-center">
+                                <img src="./img/icon/project.svg" alt="project">
+                            </div>
+                        </div>
+                        <div class="col-md-7 d-flex justify-content-center">
+                            isi
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-3 bg-light px-2 py-3 mx-1" id="budget">
-                <div class="text-project">
-                    <span
-                        class="text-uppercase position-absolute mt-n3 bg-light font-italic text-black-50">budget</span>
-                    <span>1222 Project</span>
+                <div class="col-3">
+                    tes
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-2 p-2 project-monitor-img d-flex justify-content-center">
-                        <img src="./img/icon/budget.svg" alt="project icon" class="">
-                    </div>
-                    <div class="col-10 text-center">
-                        <span class="text-uppercase mt-3">$20.000</span>
-                    </div>
+                <div class="col-3">
+                    tes
                 </div>
-            </div>
-            <div class="col-3 bg-light px-2 py-3 mx-1">
-                <div class="text-project">
-                    <span class="text-uppercase position-absolute mt-n3 bg-light">63 task</span>
-                    <span>12 Project</span>
+                <div class="col-3">
+                    tes
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-2 p-2 project-monitor-img d-flex justify-content-center">
-                        <img src="./img/icon/task.svg" alt="project icon" class="">
-                    </div>
-                    <div class="col-10 text-center">
-                        <span class="text-uppercase position-absolute mt-n3 w-100">202 task</span>
-                        <span class="text-uppercase mt-3"> 12 project</span>
-                    </div>
-                </div>
+
+                <!-- END INFO PROJECT -->
             </div>
         </div>
-        <!-- END PROJECT MONITTOR -->
-
-        <!-- PROGRESS -->
-        <div class="row mt-3 progress-content">
-            <div class="col-md-6 bg-light" id="all-task-status">
-                <div class="progress-content-title px-2">
-                    <h4 class="text-uppercase">all task by value</h4>
-                </div>
-                <div class="progress-content-progress">
-                    <div class="circle-container-inprogress"></div>
-                    <div class="circle-container-cancelled mx-auto"></div>
-                    <div class="circle-container-hold mx-auto"></div>
-                    <div class="circle-container-other mx-auto"></div>
-                </div>
-                <div class="row progress-content-information my-3 mx-2">
-                    <div class="col-lg-4 d-inline-flex my-1">
-                        <div class="open-info mx-1"></div>
-                        <span class="mr-3 mt-n1">Open</span>
-                    </div>
-                    <div class="col-lg-4 d-inline-flex my-1">
-                        <div class="inprogress-info mx-1"></div>
-                        <span class="mr-3 mt-n1">InProgress</span>
-                    </div>
-                    <div class="col-lg-4 d-inline-flex my-1">
-                        <div class="completed-info mx-1"></div>
-                        <span class="mr-3 mt-n1">Completed</span>
-                    </div>
-                    <div class="col-lg-3 d-inline-flex my-1">
-                        <div class="onhold-info"></div>
-                        <span class="mt-n1"> On Hold</span>
-                    </div>
-                    <div class="col-lg-3 d-inline-flex my-1">
-                        <div class="cancelled-info"></div>
-                        <span class="mt-n1"> Cancelled</span>
-                    </div>
-                    <div class="col-lg-3 d-inline-flex my-1">
-                        <div class="other-info"></div>
-                        <span class="mt-n1"> Other</span>
-                    </div>
-                    <div class="col-lg-3 d-inline-flex my-1">
-                        <div class="overdue-info"></div>
-                        <span class="mt-n1"> Overdue</span>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-6 bg-light" id="invoice">
-                <div class="progress-content-title px-2">
-                    <h4 class="text-uppercase">invoice</h4>
-                </div>
-                <div class="progress-content-progress">
-                    <div class="circle-container-invoice-low"></div>
-                    <div class="circle-container-invoice-medium mx-auto"></div>
-                    <div class="circle-container-invoice-high mx-auto"></div>
-                    <div class="circle-container-invoice-all mx-auto"></div>
-                    <div class="circle-container-invoice-all-2 mx-auto"></div>
-                </div>
-                <div class="row progress-content-information my-3 mx-2">
-                    <div class="col-md-4 d-inline-flex mt-2">
-                        <div class="low-info mx-1"></div>
-                        <span class="mr-3 mt-n1">Low</span>
-                    </div>
-                    <div class="col-md-4 d-inline-flex mt-2">
-                        <div class="medium-info mx-1"></div>
-                        <span class="mr-3 mt-n1">Medium</span>
-                    </div>
-                    <div class="col-md-4 d-inline-flex mt-2">
-                        <div class="high-info mx-1"></div>
-                        <span class="mr-3 mt-n1">High</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- OVERALL PROGRESS -->
-
-            <div class="col-md-3 overall-progress bg-light">
-                <div class="progress-content-title px-2">
-                    <h4 class="text-uppercase">21 of 64 task completed</h4>
-                </div>
-                <div class="overall-progress-bar"></div>
-            </div>
-
-            <!-- END OVERALL PROGRESS -->
-
-            <!-- PROGRESS WEEK -->
-
-            <div class="col-md-9 week-progress bg-light">
-                <div class="progress-content-title px-2">
-                    <h4 class="text-uppercase">3 weeks | this week | +7 weeks</h4>
-                </div>
-
-                <div class="row week-progress-content">
-                    <div class="col-md-1 order-1 mt-2">
-                        <div class="week-point due"></div>
-                        <span class="week-title">week 1</span>
-                        <svg class="progress-line-vertical">
-                            <line x1="20" y1="20" x2="20" y2="100%" class="progress-vertical"></line>
-                            <line x1="20" y1="20" x2="20" y2="70%" class="completed-vertical"></line>
-                            <line x1="20" y1="20" x2="20" y2="30%" class="due-vertical"></line>
-                        </svg>
-                    </div>
-                    <div class="col-md-1 order-2">
-                        <div class="week-point completed"></div>
-                        <span class="week-title">week 2</span>
-                    </div>
-                    <div class="col-md-1 order-3">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 3</span>
-                    </div>
-                    <div class="col-md-1 order-4">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 4</span>
-                    </div>
-                    <div class="col-md-1 order-5">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 5</span>
-                    </div>
-                    <div class="col-md-1 order-6">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 6</span>
-                    </div>
-                    <div class="col-md-1 order-7">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 7</span>
-                    </div>
-                    <div class="col-md-1 order-8">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 8</span>
-                    </div>
-                    <div class="col-md-1 order-9">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 9</span>
-                    </div>
-                    <div class="col-md-1 order-10">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 10</span>
-                    </div>
-                    <div class="col-md-1 order-11">
-                        <div class="week-point"></div>
-                        <span class="week-title">week 11</span>
-                    </div>
-                    <div class="col-md-1 line-progress">
-                        <div class="week-progress-line-progress"></div>
-                        <div class="week-progress-line-due"></div>
-                        <div class="week-progress-line-completed"></div>
-                    </div>
-                </div>
-                <div class="row week-progress-legend bg-light">
-                    <div class="col-md-1">
-                        <div class="week-progress-legend-due"></div>
-                    </div>
-                    <div class="col-md-3">
-                        <small class="text-uppercase font-weight-bold">taskdue</small>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="week-progress-legend-completed"></div>
-                    </div>
-                    <div class="col-md-3">
-                        <small class="text-uppercase font-weight-bold">task completed</small>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="week-progress-legend-inprogress"></div>
-                    </div>
-                    <div class="col-md-3">
-                        <small class="text-uppercase font-weight-bold">task in progress</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 project-timelines bg-light">
-                <div class="progress-content-title px-2">
-                    <h4 class="text-uppercase">project timelines</h4>
-                </div>
-                <div class="row my-2">
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">15-jul-15</small>
-                        </div>
-                        <div class="timelines-bar-1">
-                            <p class="project-timelines-project-name">Pipanisasi; 1-Jun-17</p>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">31-jan-16</small>
-                        </div>
-                        <div class="timelines-bar-1">
-                            <p class="project-timelines-project-name">Pipanisasi; 1-Jun-17</p>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">18-aug-16</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">6-mar-17</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">22-sep-17</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">30-apr-18</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">27-oct-18</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">15-may-19</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">1-dec-19</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">18-jun-20</small>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="project-timelines-date border-right py-2">
-                            <small class="text-secondary text-capitalize">4-jan-21</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- END PROGRESS WEEK -->
-        </div>
-
-
-        <!-- END PROGRESS -->
-
     </main>
+
     <!-- END CONTENT -->
 
     <script src=" js/jquery.js"> </script>

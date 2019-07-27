@@ -13,14 +13,17 @@
 
     /* HEADER */
     header {
-        background: linear-gradient(to right, #299eaf, #a3be91);
-        background: -webkit-linear-gradient(left, #299eaf, #a3be91);
-        background: -o-linear-gradient(right, #299eaf, #a3be91);
-        background: -moz-linear-gradient(right, #299eaf, #a3be91);
+        background: linear-gradient(to right, #85CDCA, #40B3A2);
+        background: -webkit-linear-gradient(left, #85CDCA, #40B3A2);
+        background: -o-linear-gradient(right, #85CDCA, #40B3A2);
+        background: -moz-linear-gradient(right, #85CDCA, #40B3A2);
+        min-height: 5vh;
+        overflow: hidden;
     }
 
     header h2 {
         text-align: left;
+        /* font-size: 2px; */
     }
 
     header a.back-area {
@@ -32,14 +35,13 @@
         text-decoration: none;
     }
 
-    .back-area {
+    .div-back-area {
         position: absolute;
+        display: flex;
         right: 0;
         top: 0;
-    }
-
-    .back-icon-area {
-        background: #299eaf;
+        min-height: 100%;
+        background: #85CDCA;
     }
 
     .back-area img {
@@ -52,540 +54,64 @@
 
     /* END HEADER */
 
-    /* PROJECT-MONITOR */
-    main.main-content {
-        margin-top: 100px;
-        background: #d1deee;
+    /* MAIN */
+
+    main {
+        margin-top: 96px;
+        background: #EDF5E0;
         max-width: 100vw;
     }
 
-    .project-monitor-img {
-        background: linear-gradient(to right, #299eaf, #a3be91);
-        background: -webkit-linear-gradient(left, #299eaf, #a3be91);
-        background: -o-linear-gradient(right, #299eaf, #a3be91);
-        background: -moz-linear-gradient(right, #299eaf, #a3be91);
-        border-radius: 10px;
-        /* width: 20px; */
-        min-width: 35px;
-        max-height: 45px;
-    }
+    /* INFO PROJECT */
 
-    .text-project {
-        position: absolute;
-        background: #fff;
-        color: #000;
-        padding: 2px 5px;
-        font-size: 8px;
-        width: 130px;
-        margin-top: -30px;
-        margin-left: -40px;
-        z-index: 1031;
-        text-align: center;
-        opacity: 0;
-        transition: 0.3s;
-        border-radius: 3px;
-    }
-
-    .project-monitor .col-3 {
+    .info-project .col-3 {
         -ms-flex: 0 0 24%;
         flex: 0 0 24%;
-        max-width: 21.2%;
-        box-shadow: 0 2px 4px #000;
+        max-width: 24%;
+        background: #fff;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+        margin: 0 0.5%;
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: 65px;
+    }
+
+    .info-project .col-md-5,
+    .info-project .col-md-7 {
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: 100%;
+    }
+
+    .info-project .row {
+        min-height: 100%;
+        padding: 4px 0;
+    }
+
+    .icon-info {
+        background: linear-gradient(to right, #85CDCA, #40B3A2);
+        background: -webkit-linear-gradient(left, #85CDCA, #40B3A2);
+        background: -o-linear-gradient(right, #85CDCA, #40B3A2);
+        background: -moz-linear-gradient(right, #85CDCA, #40B3A2);
+        max-width: 40%;
         border-radius: 3px;
     }
 
-    .project-monitor img {
-        width: 22px;
+    .info-project img {
+        width: 60%;
     }
 
-    .project-monitor span {
-        font-size: 14px;
-        font-weight: bold;
-    }
 
-    .project-monitor .col-10 {
-        display: none;
-        max-width: 70%;
-        align-items: center;
-        justify-content: center;
-    }
+    /* END INFO PROJECT */
 
-    /* END PROJECT-MONITOR */
+    /* END MAIN */
 
-    /* PROGRESS */
-
-    .progress-content .col-md-6 {
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-        padding-right: unset;
-        padding-left: unset;
-        min-height: 60vh;
-    }
-
-    .progress-content-information .col-lg-4 {
-        min-height: unset;
-        box-shadow: unset;
-    }
-
-    .progress-content-title {
-        display: flex;
-        background: #e4ebf3;
-        min-height: 35px;
-        align-items: center;
-    }
-
-    .progress-content-title h4 {
-        font-size: 14px;
-        color: #9ea1b2;
-    }
-
-    .circle-container-inprogress {
-        position: relative;
-        width: 150px;
-        height: 150px;
-        margin: 40px auto;
-        z-index: 2;
-    }
-
-    .circle-container-cancelled {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        margin-top: -190px;
-        z-index: 3;
-    }
-
-    .circle-container-hold {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        margin-top: -150px;
-        z-index: 4;
-    }
-
-    .circle-container-other {
-        position: absolute;
-        width: 210px;
-        height: 210px;
-        margin-top: -180px;
-        z-index: 5;
-    }
-
-    .progress-content-information span {
-        font-size: 12px;
-    }
-
-    .open-info {
-        width: 13px;
-        height: 13px;
-        background: #2697b9;
-        opacity: 0.8;
-    }
-
-    .inprogress-info {
-        width: 13px;
-        height: 13px;
-        background: #2697b9;
-        opacity: 0.5;
-    }
-
-    .completed-info {
-        width: 13px;
-        height: 13px;
-        background: #cdd6c5;
-        opacity: 0.5;
-    }
-
-    .onhold-info {
-        width: 13px;
-        height: 13px;
-        background: #dbb198;
-        opacity: 0.5;
-    }
-
-    .cancelled-info {
-        width: 13px;
-        height: 13px;
-        background: #b35d71;
-        opacity: 0.5;
-    }
-
-    .other-info {
-        width: 13px;
-        height: 13px;
-        background: #9fb3d4;
-        opacity: 1;
-    }
-
-    .overdue-info {
-        width: 13px;
-        height: 13px;
-        background: #000;
-        opacity: 1;
-    }
-
-    .circle-container-invoice-low {
-        position: relative;
-        width: 80px;
-        height: 80px;
-        margin: 110px auto;
-        z-index: 5;
-    }
-
-    .circle-container-invoice-medium {
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        margin: 60px auto;
-        margin-top: -205px;
-        z-index: 4;
-    }
-
-    .circle-container-invoice-high {
-        position: absolute;
-        width: 135px;
-        height: 135px;
-        margin: 60px auto;
-        margin-top: -185px;
-        z-index: 3;
-    }
-
-    .circle-container-invoice-all {
-        position: absolute;
-        width: 205px;
-        height: 205px;
-        margin: 20px auto;
-        margin-top: -220px;
-        z-index: 1;
-    }
-
-    .circle-container-invoice-all-2 {
-        position: absolute;
-        width: 205px;
-        height: 205px;
-        margin: 20px auto;
-        margin-top: -225px;
-        z-index: 2;
-    }
-
-    .low-info {
-        width: 13px;
-        height: 13px;
-        background: #018473;
-        opacity: 0.6;
-    }
-
-    .medium-info {
-        width: 13px;
-        height: 13px;
-        background: #41a0b2;
-        opacity: 0.6;
-    }
-
-    .high-info {
-        width: 13px;
-        height: 13px;
-        background: #3a82aa;
-        opacity: 0.6;
-    }
-
-    /* OVERALL PROGRESS */
-
-    .progress-content .col-md-3 {
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-        padding-right: unset;
-        padding-left: unset;
-        min-height: 60vh;
-    }
-
-    .overall-progress-bar {
-        position: relative;
-        width: 100%;
-        height: 80%;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 55vh;
-    }
-
-    /* END OVERALL PROGRESS */
-
-    /* WEEK PROGRESS */
-
-    .progress-content .col-md-9 {
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-        padding-right: unset;
-        padding-left: unset;
-        min-height: 60vh;
-    }
-
-    .week-progress-content {
-        align-items: flex-end;
-        min-height: 70%;
-    }
-
-    .week-point {
-        width: 13px;
-        height: 13px;
-        border-radius: 100%;
-        background: #34a1b5;
-        z-index: 2;
-    }
-
-    .week-point.completed::after {
-        background: #018473 !important;
-    }
-
-    .week-point.due::after {
-        background: #2697b9 !important;
-    }
-
-    .week-point::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 5px;
-        height: 5px;
-        background: #cad8c1;
-        border-radius: 100%;
-        z-index: 3;
-        margin-left: 4px;
-        margin-top: 5px;
-    }
-
-    .line-progress {
-        position: absolute;
-        z-index: 1;
-        min-width: 89%;
-        padding-top: 0px;
-        margin-top: -13px;
-        margin-left: 19px;
-        display: none;
-    }
-
-    .week-progress-line-progress {
-        position: absolute;
-        margin-top: 0px;
-        z-index: 3;
-    }
-
-    .progress-line-vertical {
-        display: none;
-    }
-
-    .progress-line-vertical line {
-        stroke-width: 4;
-    }
-
-    .progress-line-vertical {
-        position: absolute;
-        margin-top: -30px;
-        margin-left: -13px;
-        z-index: 2;
-        width: 100%;
-        height: 41vh;
-    }
-
-    .progress-line-vertical line.progress-vertical {
-        stroke: #c3cdb2;
-        z-index: 2;
-    }
-
-    .progress-line-vertical line.completed-vertical {
-        stroke: #018473;
-        z-index: 4;
-    }
-
-    .progress-line-vertical line.due-vertical {
-        stroke: #3a82aa;
-        z-index: 3;
-    }
-
-    .week-progress-line-due {
-        position: absolute;
-        margin-top: 0px;
-        z-index: 3;
-    }
-
-    .week-progress-line-completed {
-        position: absolute;
-        margin-top: 0px;
-        z-index: 2;
-    }
-
-    .week-progress-line-2 {
-        position: absolute;
-        width: 3px;
-        height: 0px;
-        background: #a3be91;
-        margin-top: -10px;
-        margin-left: 19px;
-        transform: rotate(0deg);
-        transition: 2s ease-in-out;
-    }
-
-    .week-title {
-        display: block;
-        margin-top: -20px;
-        margin-left: 15px;
-    }
-
-    .week-progress-legend {
-        position: absolute;
-        margin-top: -40vh;
-        margin-left: 100px;
-    }
-
-    .week-progress-legend .col-md-3 {
-        box-shadow: unset;
-        min-height: unset;
-    }
-
-    .week-progress-legend-due {
-        max-width: 20%;
-        height: 4px;
-        background: #5892c0;
-    }
-
-    .week-progress-legend-due::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #5892c0;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    .week-progress-legend-completed {
-        max-width: 20%;
-        height: 4px;
-        background: #379fa2;
-    }
-
-    .week-progress-legend-completed::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #379fa2;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    .week-progress-legend-inprogress {
-        max-width: 20%;
-        height: 4px;
-        background: #c3cdb2;
-    }
-
-    .week-progress-legend-inprogress::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #c3cdb2;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    /* END WEEK PROGRESS */
-
-    /* PROJECT TIMELINES */
-
-    .project-timelines {
-        padding-left: unset;
-        padding-right: unset;
-        min-height: 60vh;
-    }
-
-    .project-timelines-date {
-        width: 70px;
-    }
-
-    .timelines-bar-1 {
-        position: absolute;
-        transform: rotate(90deg);
-        top: 180px;
-        left: -120px;
-        min-width: 410px;
-    }
-
-    .project-timelines-project-name {
-        position: absolute;
-        margin-top: -20px;
-        opacity: 0;
-    }
-
-    /* END PROJECT TIMELINES */
-
-    /* END PROGRESS */
 }
 
 @media (min-width: 390px) {
 
     /* PROJECT MONITOR */
-    main.main-content {
-        margin-top: 50px;
-    }
 
-    .project-monitor .col-3 {
-        max-width: 22%;
-    }
-
-    /* END PROJECT MONITOR */
-
-    /* PROGRESS CONTENT */
-
-    .circle-container-invoice-low {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        margin: 70px auto;
-        z-index: 5;
-    }
-
-    .circle-container-invoice-medium {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        margin: 60px auto;
-        margin-top: -205px;
-        z-index: 4;
-    }
-
-    .circle-container-invoice-high {
-        position: absolute;
-        width: 185px;
-        height: 185px;
-        margin: 60px auto;
-        margin-top: -227px;
-        z-index: 3;
-    }
-
-    .circle-container-invoice-all {
-        position: absolute;
-        width: 245px;
-        height: 245px;
-        margin: 20px auto;
-        margin-top: -265px;
-        z-index: 1;
-    }
-
-    .circle-container-invoice-all-2 {
-        position: absolute;
-        width: 245px;
-        height: 245px;
-        margin: 20px auto;
-        margin-top: -265px;
-        z-index: 2;
-    }
 
     /* END PROGRESS CONTENT */
 }
@@ -603,201 +129,18 @@
 
     /* END HEADER */
 
-    /* PROJECT MONITOR */
-    main.main-content {
-        margin-top: 50px;
+    /* MAIN */
+
+    main {
+        margin-top: 55px;
     }
 
-    .project-monitor .col-3 {
-        max-width: 23%;
-    }
+    /* INFO PROJECT */
 
-    .project-monitor .col-10 {
-        display: flex;
-        line-height: 15px;
-    }
+    /* END INFO PROJECT */
 
-    #budget span::before {
-        content: 'budget';
-        position: absolute;
-        margin-top: -20px;
-        font-style: italic;
-        color: #c3c3c3;
-        font-size: 15px;
-    }
+    /* END MAIN */
 
-    /* END PROJECT MONITOR */
-
-    /* PROGRESS */
-
-    .progress-content .col-md-6 {
-        max-width: 49%;
-    }
-
-    .progress-content .col-md-6#all-task-status {
-        margin-right: 5px;
-    }
-
-    .progress-content .col-md-6#invoice {
-        margin-left: 5px;
-    }
-
-    .progress-content .col-md-3 {
-        margin-right: 5px;
-        -ms-flex: 0 0 24%;
-        flex: 0 0 24%;
-        max-width: 24%;
-    }
-
-    .progress-content .col-md-9 {
-        margin-left: 5px;
-        -ms-flex: 0 0 74%;
-        flex: 0 0 74%;
-        max-width: 74%;
-    }
-
-    .progress-content .col-md-3,
-    .progress-content .col-md-9 {
-        margin-top: 20px;
-    }
-
-    /* WEEK PROGRESS */
-
-    .week-progress-bar {
-        display: inline-flex;
-    }
-
-    .week-point {
-        width: 19px;
-        height: 19px;
-        border-radius: 100%;
-        background: #34a1b5;
-        margin: 0 1.5vw;
-    }
-
-    .week-progress-content {
-        align-items: flex-end;
-        min-height: 65%;
-    }
-
-    .week-point::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        background: #cad8c1;
-        border-radius: 100%;
-        z-index: 2;
-        margin-left: 4px;
-        margin-top: 5px;
-    }
-
-    .line-progress {
-        position: absolute;
-        z-index: 1;
-        min-width: 89%;
-        padding-top: 0px;
-        margin-top: -13px;
-        margin-left: 19px;
-        transform: unset;
-        display: unset;
-    }
-
-    .week-title {
-        position: absolute;
-        display: block;
-        font-size: 10px;
-        min-width: 50px;
-        text-align: center;
-        margin: unset;
-        z-index: 1;
-    }
-
-    .week-progress-legend {
-        position: relative;
-        margin-top: unset;
-        margin-left: unset;
-    }
-
-    .week-progress-legend .col-md-1 {
-        margin-top: 30px;
-    }
-
-    .week-progress-legend .col-md-3 {
-        margin-right: unset;
-    }
-
-    .week-progress-legend-due {
-        max-width: unset;
-        height: 4px;
-        background: #5892c0;
-    }
-
-    .week-progress-legend-due::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #5892c0;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    .week-progress-legend-completed {
-        min-width: 100%;
-        height: 4px;
-        background: #379fa2;
-    }
-
-    .week-progress-legend-completed::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #379fa2;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    .week-progress-legend-inprogress {
-        min-width: 100%;
-        height: 4px;
-        background: #c3cdb2;
-    }
-
-    .week-progress-legend-inprogress::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background: #c3cdb2;
-        margin-top: -3px;
-        margin-left: 5px;
-    }
-
-    .week-progress-line-2 {
-        display: none;
-    }
-
-    /* END WEEK PROGRESS */
-
-    /* PROJECT TIMELINES */
-
-    .project-timelines {
-        padding-left: unset;
-        padding-right: unset;
-    }
-
-    /* END PROJECT TIMELINES */
-
-    /* END PROGRESS */
 }
 
 
@@ -806,10 +149,10 @@
     /* HEADER */
     .back-area {
         width: 170px;
-        background: linear-gradient(to right, #299eaf, #a3be91);
-        background: -webkit-linear-gradient(left, #299eaf, #a3be91);
-        background: -o-linear-gradient(right, #299eaf, #a3be91);
-        background: -moz-linear-gradient(right, #299eaf, #a3be91);
+        background: linear-gradient(to right, #85CDCA, #40B3A2);
+        background: -webkit-linear-gradient(left, #85CDCA, #40B3A2);
+        background: -o-linear-gradient(right, #85CDCA, #40B3A2);
+        background: -moz-linear-gradient(right, #85CDCA, #40B3A2);
     }
 
     .back-text-area {
@@ -826,9 +169,6 @@
 
     /* PROJECT MONITOR */
 
-    .project-monitor .col-3 {
-        max-width: 29%;
-    }
 
     /* END PROJECT MONITOR */
 }
