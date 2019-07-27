@@ -183,14 +183,13 @@
                 </div>
 
                 <div class="row week-progress-content">
-                    <div class="col-md-1 order-1">
+                    <div class="col-md-1 order-1 mt-2">
                         <div class="week-point due"></div>
                         <span class="week-title">week 1</span>
-                        <svg width="300" height="355" class="progress-line-vertical progress-vertical">
-                            <line x1="20" y1="20" x2="20" y2="270" stroke="#c3cdb2" stroke-width='4'></line>
-                        </svg>
-                        <svg class="progress-line-vertical progress-vertical">
-                            <line></line>
+                        <svg class="progress-line-vertical">
+                            <line x1="20" y1="20" x2="20" y2="100%" class="progress-vertical"></line>
+                            <line x1="20" y1="20" x2="20" y2="70%" class="completed-vertical"></line>
+                            <line x1="20" y1="20" x2="20" y2="30%" class="due-vertical"></line>
                         </svg>
                     </div>
                     <div class="col-md-1 order-2">
@@ -239,8 +238,7 @@
                         <div class="week-progress-line-completed"></div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="row week-progress-legend">
+                <div class="row week-progress-legend bg-light">
                     <div class="col-md-1">
                         <div class="week-progress-legend-due"></div>
                     </div>
@@ -259,7 +257,76 @@
                     <div class="col-md-3">
                         <small class="text-uppercase font-weight-bold">task in progress</small>
                     </div>
-                </div> -->
+                </div>
+            </div>
+            <div class="col-md-8 project-timelines bg-light">
+                <div class="progress-content-title px-2">
+                    <h4 class="text-uppercase">project timelines</h4>
+                </div>
+                <div class="row my-2">
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">15-jul-15</small>
+                        </div>
+                        <div class="timelines-bar-1">
+                            <p class="project-timelines-project-name">Pipanisasi; 1-Jun-17</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">31-jan-16</small>
+                        </div>
+                        <div class="timelines-bar-1">
+                            <p class="project-timelines-project-name">Pipanisasi; 1-Jun-17</p>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">18-aug-16</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">6-mar-17</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">22-sep-17</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">30-apr-18</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">27-oct-18</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">15-may-19</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">1-dec-19</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">18-jun-20</small>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="project-timelines-date border-right py-2">
+                            <small class="text-secondary text-capitalize">4-jan-21</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- END PROGRESS WEEK -->

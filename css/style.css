@@ -312,18 +312,6 @@
 
     /* WEEK PROGRESS */
 
-    /* .progress-line::before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 3px;
-        height: 65%;
-        background: #a3be91;
-        z-index: 3;
-        margin-top: -10px;
-        margin-left: 20px;
-    } */
-
     .progress-content .col-md-9 {
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
         padding-right: unset;
@@ -389,21 +377,28 @@
         stroke-width: 4;
     }
 
-    .progress-line-vertical.progress-vertical {
+    .progress-line-vertical {
         position: absolute;
         margin-top: -30px;
         margin-left: -13px;
         z-index: 2;
-        width: 300;
-        height: 355;
+        width: 100%;
+        height: 41vh;
     }
 
-    .progress-line-vertical.progress-vertical line {
+    .progress-line-vertical line.progress-vertical {
         stroke: #c3cdb2;
-        x1: 20;
-        y1: 2;
-        x2: 20;
-        y2: 270;
+        z-index: 2;
+    }
+
+    .progress-line-vertical line.completed-vertical {
+        stroke: #018473;
+        z-index: 4;
+    }
+
+    .progress-line-vertical line.due-vertical {
+        stroke: #3a82aa;
+        z-index: 3;
     }
 
     .week-progress-line-due {
@@ -433,6 +428,12 @@
         display: block;
         margin-top: -20px;
         margin-left: 15px;
+    }
+
+    .week-progress-legend {
+        position: absolute;
+        margin-top: -40vh;
+        margin-left: 100px;
     }
 
     .week-progress-legend .col-md-3 {
@@ -495,6 +496,34 @@
     }
 
     /* END WEEK PROGRESS */
+
+    /* PROJECT TIMELINES */
+
+    .project-timelines {
+        padding-left: unset;
+        padding-right: unset;
+        min-height: 60vh;
+    }
+
+    .project-timelines-date {
+        width: 70px;
+    }
+
+    .timelines-bar-1 {
+        position: absolute;
+        transform: rotate(90deg);
+        top: 180px;
+        left: -120px;
+        min-width: 410px;
+    }
+
+    .project-timelines-project-name {
+        position: absolute;
+        margin-top: -20px;
+        opacity: 0;
+    }
+
+    /* END PROJECT TIMELINES */
 
     /* END PROGRESS */
 }
@@ -678,14 +707,29 @@
     .week-title {
         position: absolute;
         display: block;
-        font-size: 12px;
+        font-size: 10px;
         min-width: 50px;
         text-align: center;
         margin: unset;
+        z-index: 1;
+    }
+
+    .week-progress-legend {
+        position: relative;
+        margin-top: unset;
+        margin-left: unset;
+    }
+
+    .week-progress-legend .col-md-1 {
+        margin-top: 30px;
+    }
+
+    .week-progress-legend .col-md-3 {
+        margin-right: unset;
     }
 
     .week-progress-legend-due {
-        /* min-width: 100%; */
+        max-width: unset;
         height: 4px;
         background: #5892c0;
     }
@@ -743,6 +787,15 @@
     }
 
     /* END WEEK PROGRESS */
+
+    /* PROJECT TIMELINES */
+
+    .project-timelines {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    /* END PROJECT TIMELINES */
 
     /* END PROGRESS */
 }

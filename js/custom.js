@@ -565,6 +565,8 @@ $(window).ready(function () {
         duration: 4000
     });
 
+    $('.week-progress-line-completed').css('z-index', '4')
+
     var lineBarCompleted = new ProgressBar.Line(".week-progress-line-completed", {
         strokeWidth: 0.8,
         trailWidth: 0,
@@ -604,6 +606,75 @@ $(window).ready(function () {
     if ($(window).width() < 768) {
         $('.progress-line-vertical').css('display', 'unset')
     }
+
+    // PROJECT TIMELINES
+
+    var lineBarTimelines = []
+    var marginlines = []
+    var lengthTime = [0.3, 0.1, 0.4, 0.9, 0.2, 0.1, 0.9, 0.1, 0.4, 0.3, 0.9, 0.2, 0.1]
+    for (let index = 0; index < 12; index++) {
+        marginlines.push(10 * index)
+    }
+    console.log(lengthTime)
+    for (let timelines = 1; timelines < 12; timelines++) {
+        lineBarTimelines.push(timelines)
+        lineBarTimelines[timelines] = new ProgressBar.Line(".timelines-bar-1", {
+            strokeWidth: 1,
+            trailWidth: 0,
+            from: {
+                color: "#3a82aa"
+            },
+            to: {
+                color: "#018473"
+            },
+            text: {
+                value: '0',
+                className: 'progress-text',
+                style: {
+                    color: 'black',
+                    position: 'absolute',
+                    display: 'block',
+                    top: '-30px',
+                    padding: 0,
+                    transform: null,
+                    width: '300px',
+                    fontSize: '12px',
+                    bottom: '0px',
+                    marginTop: '10px',
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                zIndex: '1',
+                bottom: marginlines[timelines - 1],
+            },
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("class", 'coba');
+                shape.setText('');
+            }
+        });
+
+        lineBarTimelines[timelines].animate(lengthTime[timelines - 1], {
+            duration: 4000
+        });
+    }
+
+    $('.project-timelines-date').hover(function () {
+        $('.project-timelines-project-name').css('opacity', '1')
+    })
+
+    // var coba = []
+    // for (let no = 1; no <= 3; no++) {
+    // coba += no
+    // coba[no] = 'tes'
+    // coba.push(no)
+    // alert(coba)
+
+    // }
+    // console.log(coba[2])
+    // END PROJECT TIMELINES
 
 
     // END PROGRESS
