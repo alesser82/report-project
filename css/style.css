@@ -122,6 +122,42 @@
 
     /* END INFO PROJECT */
 
+    .title-progress {
+        display: block;
+        padding: 10px 10px;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.5)
+    }
+
+    /* ALL TASK BY STATUS */
+
+    .all-task-by-status {
+        background: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: 70vh;
+        max-height: 70vh;
+        overflow: hidden;
+    }
+
+    /* END ALL TASK BY STATUS */
+
+    /* INVOICE */
+
+    .invoice {
+        background: #fff;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: 70vh;
+        max-height: 70vh;
+        overflow: hidden;
+    }
+
+    /* END INVOICE */
+
     /* END MAIN */
 
 }
@@ -168,6 +204,28 @@
     }
 
     /* END INFO PROJECT */
+
+    /* ALL TASK BY STATUS */
+
+    .all-task-by-status {
+        -ms-flex: 0 0 49.5%;
+        flex: 0 0 49.5%;
+        max-width: 49.5%;
+        margin: 0px 2px;
+    }
+
+    /* END ALL TASK BY STATUS */
+
+    /* INVOICE */
+
+    .invoice {
+        -ms-flex: 0 0 49.5%;
+        flex: 0 0 49.5%;
+        max-width: 49.5%;
+        margin: 0px 2px;
+    }
+
+    /* END INVOICE */
 
     /* END MAIN */
 
