@@ -142,6 +142,11 @@
         overflow: hidden;
     }
 
+    .progress-content {
+        /* background: rgba(0, 0, 0, 0.5); */
+        height: 60%;
+    }
+
     /* END ALL TASK BY STATUS */
 
     /* INVOICE */
@@ -208,10 +213,10 @@
     /* ALL TASK BY STATUS */
 
     .all-task-by-status {
-        -ms-flex: 0 0 49.5%;
-        flex: 0 0 49.5%;
-        max-width: 49.5%;
-        margin: 0px 2px;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin: 0px 1%;
     }
 
     /* END ALL TASK BY STATUS */
@@ -219,10 +224,10 @@
     /* INVOICE */
 
     .invoice {
-        -ms-flex: 0 0 49.5%;
-        flex: 0 0 49.5%;
-        max-width: 49.5%;
-        margin: 0px 2px;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin: 0px 1%;
     }
 
     /* END INVOICE */
