@@ -213,7 +213,52 @@
         overflow: hidden;
     }
 
+    .invoice-progress {
+        position: relative;
+        min-height: 70%;
+    }
+
+    .invoice-legend-low {
+        width: 10px;
+        height: 10px;
+        background: #40B3A2;
+    }
+
+    .invoice-legend-medium {
+        width: 10px;
+        height: 10px;
+        background: #31668E;
+    }
+
+    .invoice-legend-high {
+        width: 10px;
+        height: 10px;
+        background: #242582;
+    }
+
     /* END INVOICE */
+
+    /* TASK COMPLETED */
+
+    .info-project .col-md-5.task-completed {
+        min-height: unset;
+        min-height: 50vh;
+        max-height: 50vh;
+        background: #fff;
+    }
+
+    /* END TASK COMPLETED */
+
+    /* WEEK PROGRESS */
+
+    .info-project .col-md-7.week-progress {
+        min-height: unset;
+        min-height: 50vh;
+        max-height: 50vh;
+        background: #fff;
+    }
+
+    /* END WEEK PROGRESS */
 
     /* END MAIN */
 
@@ -283,6 +328,28 @@
     }
 
     /* END INVOICE */
+
+    /* TASK COMPLETED */
+
+    .task-completed {
+        -ms-flex: 0 0 38.666667%;
+        flex: 0 0 38.666667%;
+        max-width: 38.666667%;
+        margin: 0px 1%;
+    }
+
+    /* END TASK COMPLETED */
+
+    /* WEEK PROGRESS */
+
+    .week-progress {
+        -ms-flex: 0 0 57.333333%;
+        flex: 0 0 57.333333%;
+        max-width: 57.333333%;
+        margin: 0px 1%;
+    }
+
+    /* END WEEK PROGRESS */
 
     /* END MAIN */
 

@@ -470,13 +470,18 @@ $(window).ready(function () {
                 value: '0',
                 className: 'progress-task',
                 style: {
+                    display: 'block',
                     color: 'black',
                     position: 'absolute',
-                    top: '45%',
-                    left: '50%',
                     padding: 0,
                     margin: 0,
-                    transform: null
+                    transform: null,
+                    fontWeight: 500,
+                    marginTop: '9%',
+                    marginLeft: '-10%',
+                    zIndex: '3',
+                    fontSize: '14px',
+                    // background: '#fff'
                 }
             },
 
@@ -492,7 +497,7 @@ $(window).ready(function () {
                 shape.path.setAttribute("stroke", state.color);
                 shape.path.setAttribute("stroke-width", state.width);
                 // shape.setText(Math.round(shape.value() * 100) + ' %');
-                shape.setText('');
+                shape.setText('10 Invoice');
             }
         });
 
@@ -520,13 +525,18 @@ $(window).ready(function () {
                 value: '0',
                 className: 'progress-task',
                 style: {
+                    display: 'block',
                     color: 'black',
                     position: 'absolute',
-                    top: '45%',
-                    left: '50%',
                     padding: 0,
                     margin: 0,
-                    transform: null
+                    transform: null,
+                    fontWeight: 500,
+                    marginTop: '14%',
+                    marginLeft: '-10%',
+                    zIndex: '2',
+                    fontSize: '14px'
+                    // background: '#fff'
                 }
             },
 
@@ -542,7 +552,7 @@ $(window).ready(function () {
                 shape.path.setAttribute("stroke", state.color);
                 shape.path.setAttribute("stroke-width", state.width);
                 // shape.setText(Math.round(shape.value() * 100) + ' %');
-                shape.setText('');
+                shape.setText('20 Invoice');
             }
         });
 
@@ -570,14 +580,18 @@ $(window).ready(function () {
                 value: '0',
                 className: 'progress-task',
                 style: {
+                    display: 'block',
                     color: 'black',
                     position: 'absolute',
                     padding: 0,
                     margin: 0,
                     transform: null,
-                    // minHeight: "100%"
-                    marginTop: '20%',
-                    marginLeft: '-12%'
+                    fontWeight: 500,
+                    marginTop: '18%',
+                    marginLeft: '-11%',
+                    zIndex: '2',
+                    fontSize: '14px'
+                    // background: '#fff'
                 }
             },
 
@@ -593,7 +607,7 @@ $(window).ready(function () {
                 shape.path.setAttribute("stroke", state.color);
                 shape.path.setAttribute("stroke-width", state.width);
                 // shape.setText(Math.round(shape.value() * 100) + ' %');
-                shape.setText('22 Invoice');
+                shape.setText('222 Invoice');
             }
         });
 
