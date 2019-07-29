@@ -205,7 +205,7 @@
 
     .invoice {
         background: #fff;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         padding-left: 0px;
         padding-right: 0px;
         min-height: 75vh;
@@ -245,6 +245,18 @@
         min-height: 50vh;
         max-height: 50vh;
         background: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .task-completed-progress {
+        height: 82%;
+        background: #C2C9CF;
+    }
+
+    .task-completed span {
+        color: #f8f9fa;
+        font-size: 14px;
+        text-transform: uppercase;
     }
 
     /* END TASK COMPLETED */
@@ -256,6 +268,30 @@
         min-height: 50vh;
         max-height: 50vh;
         background: #fff;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .week-progress-content {
+        height: 50%;
+    }
+
+    .week-point-1 {
+        position: relative;
+        z-index: 5;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: #242582;
+    }
+
+    .week-point-2 {
+        position: relative;
+        z-index: 5;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: #242582;
+        margin-left: 10%;
     }
 
     /* END WEEK PROGRESS */

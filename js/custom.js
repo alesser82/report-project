@@ -618,4 +618,120 @@ $(window).ready(function () {
 
     // END INVOICE
 
+    // TASK COMPLETED
+
+    taskCompletedProgress()
+
+    function taskCompletedProgress() {
+        var taskCompletedProgress = new ProgressBar.Circle(".task-completed-progress", {
+            color: "violet",
+            strokeWidth: 7,
+            trailWidth: 7,
+            trailColor: "#C2C9CF",
+            easing: "easeInOut",
+            from: {
+                color: "#40B3A2",
+                width: 7
+            },
+            to: {
+                color: "#40B3A2",
+                width: 7
+            },
+            text: {
+                value: '0',
+                className: 'text-light text-center',
+                style: {
+                    position: 'absolute',
+                    padding: 0,
+                    margin: 0,
+                    transform: null,
+                    fontWeight: 600,
+                    zIndex: '2',
+                    fontSize: '24px'
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '60%',
+                zIndex: '1',
+                background: '#000',
+                borderRadius: '100%'
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('76% <br> <span>overall progress</span>');
+            }
+        });
+
+        taskCompletedProgress.animate(0.55, {
+            duration: 2000
+        });
+    }
+
+    // END TASK COMPLETED
+
+    // WEEK PROGRESS
+
+    weekTaskProgress()
+
+    function weekTaskProgress() {
+        var weekTaskProgress = new ProgressBar.Line(".week-progress-content", {
+            color: "violet",
+            strokeWidth: 5,
+            trailWidth: 5,
+            trailColor: "transparant",
+            easing: "easeInOut",
+            from: {
+                color: "#40B3A2",
+                width: 5
+            },
+            to: {
+                color: "#40B3A2",
+                width: 5
+            },
+            text: {
+                value: '0',
+                className: 'text-light text-center',
+                style: {
+                    position: 'absolute',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    transform: null,
+                    fontWeight: 600,
+                    width: '10%',
+                    zIndex: '3',
+                    fontSize: '24px',
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '10%',
+                height: '5px',
+                zIndex: '1',
+                background: '#000',
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('<div class="week-point-1 mb-n2"></div>');
+                // shape.setText('');
+            }
+        });
+
+        weekTaskProgress.animate(1, {
+            duration: 2000
+        });
+    }
+
+    // END WEEK PROGRESS
+
 })
