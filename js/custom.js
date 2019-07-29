@@ -397,7 +397,207 @@ $(window).ready(function () {
             }
         });
 
-        totalInvoiceMediumProgress.animate(1.85, {
+        totalInvoiceMediumProgress.animate(1.6, {
+            duration: 2000
+        }, totalInvoiceHighProgress());
+    }
+
+    function totalInvoiceHighProgress() {
+        var totalInvoiceHighProgress = new ProgressBar.Circle(".invoice-progress", {
+            color: "violet",
+            strokeWidth: 9,
+            trailWidth: 9,
+            trailColor: "transparant",
+            easing: "easeInOut",
+            from: {
+                color: "#242582",
+                width: 9
+            },
+            to: {
+                color: "#242582",
+                width: 9
+            },
+            text: {
+                value: '0',
+                className: 'progress-task',
+                style: {
+                    color: 'black',
+                    position: 'absolute',
+                    top: '45%',
+                    left: '50%',
+                    padding: 0,
+                    margin: 0,
+                    transform: null
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '70%',
+                zIndex: '3',
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('');
+            }
+        });
+
+        totalInvoiceHighProgress.animate(1.8, {
+            duration: 2000
+        }, invoiceHighProgress());
+    }
+
+    function invoiceHighProgress() {
+        var invoiceHighProgress = new ProgressBar.Circle(".invoice-progress", {
+            color: "violet",
+            strokeWidth: 9,
+            trailWidth: 9,
+            trailColor: "transparant",
+            easing: "easeInOut",
+            from: {
+                color: "#242582",
+                width: 9
+            },
+            to: {
+                color: "#242582",
+                width: 9
+            },
+            text: {
+                value: '0',
+                className: 'progress-task',
+                style: {
+                    color: 'black',
+                    position: 'absolute',
+                    top: '45%',
+                    left: '50%',
+                    padding: 0,
+                    margin: 0,
+                    transform: null
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '50%',
+                zIndex: '1',
+                marginTop: '10%'
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('');
+            }
+        });
+
+        invoiceHighProgress.animate(0.45, {
+            duration: 2000
+        }, invoiceMediumProgress());
+    }
+
+    function invoiceMediumProgress() {
+        var invoiceMediumProgress = new ProgressBar.Circle(".invoice-progress", {
+            color: "violet",
+            strokeWidth: 10,
+            trailWidth: 10,
+            trailColor: "transparant",
+            easing: "easeInOut",
+            from: {
+                color: "#31668E",
+                width: 10
+            },
+            to: {
+                color: "#31668E",
+                width: 10
+            },
+            text: {
+                value: '0',
+                className: 'progress-task',
+                style: {
+                    color: 'black',
+                    position: 'absolute',
+                    top: '45%',
+                    left: '50%',
+                    padding: 0,
+                    margin: 0,
+                    transform: null
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '40%',
+                zIndex: '1',
+                marginTop: '15%'
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('');
+            }
+        });
+
+        invoiceMediumProgress.animate(0.6, {
+            duration: 2000
+        }, invoiceLowProgress());
+    }
+
+    function invoiceLowProgress() {
+        var invoiceLowProgress = new ProgressBar.Circle(".invoice-progress", {
+            color: "violet",
+            strokeWidth: 10,
+            trailWidth: 10,
+            trailColor: "transparant",
+            easing: "easeInOut",
+            from: {
+                color: "#40B3A2",
+                width: 10
+            },
+            to: {
+                color: "#40B3A2",
+                width: 10
+            },
+            text: {
+                value: '0',
+                className: 'progress-task',
+                style: {
+                    color: 'black',
+                    position: 'absolute',
+                    padding: 0,
+                    margin: 0,
+                    transform: null,
+                    // minHeight: "100%"
+                    marginTop: '20%',
+                    marginLeft: '-12%'
+                }
+            },
+
+            svgStyle: {
+                position: 'absolute',
+                display: 'block',
+                width: '30%',
+                zIndex: '1',
+                marginTop: '20%'
+            },
+
+            step: (state, shape) => {
+                shape.path.setAttribute("stroke", state.color);
+                shape.path.setAttribute("stroke-width", state.width);
+                // shape.setText(Math.round(shape.value() * 100) + ' %');
+                shape.setText('22 Invoice');
+            }
+        });
+
+        invoiceLowProgress.animate(0.55, {
             duration: 2000
         });
     }

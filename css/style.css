@@ -1,8 +1,16 @@
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url(../font/source-sans-pro/woff/sourcesanspro-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media (min-width: 320px) {
 
     html,
     body {
         max-width: 100vw;
+        font-family: 'source-sans-pro', arial;
     }
 
     .row {
