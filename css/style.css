@@ -250,7 +250,6 @@
 
     .task-completed-progress {
         height: 82%;
-        background: #C2C9CF;
     }
 
     .task-completed span {
@@ -275,23 +274,13 @@
         height: 50%;
     }
 
-    .week-point-1 {
+    .week-point {
         position: relative;
         z-index: 5;
         width: 20px;
         height: 20px;
         border-radius: 100%;
         background: #242582;
-    }
-
-    .week-point-2 {
-        position: relative;
-        z-index: 5;
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        background: #242582;
-        margin-left: 10%;
     }
 
     /* END WEEK PROGRESS */

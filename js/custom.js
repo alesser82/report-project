@@ -668,7 +668,7 @@ $(window).ready(function () {
             }
         });
 
-        taskCompletedProgress.animate(0.55, {
+        taskCompletedProgress.animate(0.76, {
             duration: 2000
         });
     }
@@ -680,56 +680,168 @@ $(window).ready(function () {
     weekTaskProgress()
 
     function weekTaskProgress() {
-        var weekTaskProgress = new ProgressBar.Line(".week-progress-content", {
-            color: "violet",
-            strokeWidth: 5,
-            trailWidth: 5,
-            trailColor: "transparant",
-            easing: "easeInOut",
-            from: {
-                color: "#40B3A2",
-                width: 5
-            },
-            to: {
-                color: "#40B3A2",
-                width: 5
-            },
-            text: {
-                value: '0',
-                className: 'text-light text-center',
-                style: {
+        var weekTaskProgress = []
+        for (let index = 0; index <= 9; index++) {
+            weekTaskProgress.push(index)
+            weekTaskProgress[index] = new ProgressBar.Line(".week-progress-content", {
+                color: "violet",
+                strokeWidth: 5,
+                trailWidth: 5,
+                trailColor: "white",
+                easing: "easeInOut",
+                from: {
+                    color: "#40B3A2",
+                    width: 5
+                },
+                to: {
+                    color: "#40B3A2",
+                    width: 5
+                },
+                text: {
+                    value: '0',
+                    className: 'text-light text-center',
+                    style: {
+                        position: 'absolute',
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        transform: null,
+                        fontWeight: 600,
+                        width: '10%',
+                        zIndex: '3',
+                        fontSize: '24px',
+                        marginLeft: (index * 10) + '%'
+                    }
+                },
+
+                svgStyle: {
                     position: 'absolute',
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    transform: null,
-                    fontWeight: 600,
+                    display: 'block',
                     width: '10%',
-                    zIndex: '3',
-                    fontSize: '24px',
+                    height: '5px',
+                    zIndex: '1',
+                    background: '#000',
+                    marginLeft: (index * 10) + '%'
+                },
+
+                step: (state, shape) => {
+                    shape.path.setAttribute("stroke", state.color);
+                    shape.path.setAttribute("stroke-width", state.width);
+                    // shape.setText(Math.round(shape.value() * 100) + ' %');
+                    shape.setText('<div class="week-point mb-n2"></div>');
+                    // shape.setText('');
                 }
-            },
+            });
 
-            svgStyle: {
-                position: 'absolute',
-                display: 'block',
-                width: '10%',
-                height: '5px',
-                zIndex: '1',
-                background: '#000',
-            },
+            weekTaskProgress[index].animate(1, {
+                duration: 2000
+            });
+        }
+        console.log(weekTaskProgress)
+        // var weekTaskProgress = new ProgressBar.Line(".week-progress-content", {
+        //     color: "violet",
+        //     strokeWidth: 5,
+        //     trailWidth: 5,
+        //     trailColor: "transparant",
+        //     easing: "easeInOut",
+        //     from: {
+        //         color: "#40B3A2",
+        //         width: 5
+        //     },
+        //     to: {
+        //         color: "#40B3A2",
+        //         width: 5
+        //     },
+        //     text: {
+        //         value: '0',
+        //         className: 'text-light text-center',
+        //         style: {
+        //             position: 'absolute',
+        //             display: 'flex',
+        //             justifyContent: 'flex-end',
+        //             transform: null,
+        //             fontWeight: 600,
+        //             width: '10%',
+        //             zIndex: '3',
+        //             fontSize: '24px',
+        //             marginLeft: '1%'
+        //         }
+        //     },
 
-            step: (state, shape) => {
-                shape.path.setAttribute("stroke", state.color);
-                shape.path.setAttribute("stroke-width", state.width);
-                // shape.setText(Math.round(shape.value() * 100) + ' %');
-                shape.setText('<div class="week-point-1 mb-n2"></div>');
-                // shape.setText('');
-            }
-        });
+        //     svgStyle: {
+        //         position: 'absolute',
+        //         display: 'block',
+        //         width: '10%',
+        //         height: '5px',
+        //         zIndex: '1',
+        //         background: '#000',
+        //         marginLeft: '1%'
+        //     },
 
-        weekTaskProgress.animate(1, {
-            duration: 2000
-        });
+        //     step: (state, shape) => {
+        //         shape.path.setAttribute("stroke", state.color);
+        //         shape.path.setAttribute("stroke-width", state.width);
+        //         // shape.setText(Math.round(shape.value() * 100) + ' %');
+        //         shape.setText('<div class="week-point mb-n2"></div>');
+        //         // shape.setText('');
+        //     }
+        // });
+
+        // weekTaskProgress.animate(1, {
+        //     duration: 2000
+        // });
+
+        // var weekTaskProgress2 = new ProgressBar.Line(".week-progress-content", {
+        //     color: "violet",
+        //     strokeWidth: 5,
+        //     trailWidth: 5,
+        //     trailColor: "transparant",
+        //     easing: "easeInOut",
+        //     from: {
+        //         color: "#40B3A2",
+        //         width: 5
+        //     },
+        //     to: {
+        //         color: "#40B3A2",
+        //         width: 5
+        //     },
+        //     text: {
+        //         value: '0',
+        //         className: 'text-light text-center',
+        //         style: {
+        //             position: 'absolute',
+        //             display: 'flex',
+        //             justifyContent: 'flex-end',
+        //             transform: null,
+        //             fontWeight: 600,
+        //             width: '10%',
+        //             zIndex: '3',
+        //             fontSize: '24px',
+        //             marginLeft: '10%'
+        //         }
+        //     },
+
+        //     svgStyle: {
+        //         position: 'absolute',
+        //         display: 'block',
+        //         width: '10%',
+        //         height: '5px',
+        //         zIndex: '1',
+        //         background: '#000',
+        //         marginLeft: '10%'
+        //     },
+
+        //     step: (state, shape) => {
+        //         shape.path.setAttribute("stroke", state.color);
+        //         shape.path.setAttribute("stroke-width", state.width);
+        //         // shape.setText(Math.round(shape.value() * 100) + ' %');
+        //         shape.setText('<div class="week-point mb-n2"></div>');
+        //         // shape.setText('');
+        //     }
+        // });
+
+        // weekTaskProgress2.animate(1, {
+        //     duration: 2000
+        // });
     }
 
     // END WEEK PROGRESS
