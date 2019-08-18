@@ -21,10 +21,10 @@
 
     /* HEADER */
     header {
-        background: linear-gradient(to right, #85CDCA, #40B3A2);
-        background: -webkit-linear-gradient(left, #85CDCA, #40B3A2);
-        background: -o-linear-gradient(right, #85CDCA, #40B3A2);
-        background: -moz-linear-gradient(right, #85CDCA, #40B3A2);
+        background: linear-gradient(to right, #27a1b8, #9bc09f);
+        background: -webkit-linear-gradient(left, #27a1b8, #9bc09f);
+        background: -o-linear-gradient(right, #27a1b8, #9bc09f);
+        background: -moz-linear-gradient(right, #27a1b8, #9bc09f);
         min-height: 5vh;
         overflow: hidden;
     }
@@ -49,7 +49,7 @@
         right: 0;
         top: 0;
         min-height: 100%;
-        background: #85CDCA;
+        background: #27a1b8;
     }
 
     .back-area img {
@@ -98,10 +98,10 @@
     }
 
     .icon-info {
-        background: linear-gradient(to right, #85CDCA, #40B3A2);
-        background: -webkit-linear-gradient(left, #85CDCA, #40B3A2);
-        background: -o-linear-gradient(right, #85CDCA, #40B3A2);
-        background: -moz-linear-gradient(right, #85CDCA, #40B3A2);
+        background: linear-gradient(to right, #27a1b8, #9bc09f);
+        background: -webkit-linear-gradient(left, #27a1b8, #9bc09f);
+        background: -o-linear-gradient(right, #27a1b8, #9bc09f);
+        background: -moz-linear-gradient(right, #27a1b8, #9bc09f);
         max-width: 50%;
         border-radius: 3px;
         /* max-height: 60%; */
@@ -163,6 +163,12 @@
         margin-top: 100px;
     }
 
+    .legend-icon-open {
+        width: 10px;
+        height: 10px;
+        background: #598ead;
+    }
+
     .legend-icon-inprogress {
         width: 10px;
         height: 10px;
@@ -172,13 +178,13 @@
     .legend-icon-completed {
         width: 10px;
         height: 10px;
-        background: #40B3A2;
+        background: #b7c9a1;
     }
 
     .legend-icon-overdue {
         width: 10px;
         height: 10px;
-        background: #C2C9CF;
+        background: #000;
     }
 
     .legend-icon-onhold {
@@ -196,7 +202,16 @@
     .legend-icon-other {
         width: 10px;
         height: 10px;
-        background: #242582;
+        background: #9db1cc;
+    }
+
+    .col-3.progress-legend {
+        box-shadow: unset;
+        padding-top: 0px;
+    }
+
+    .progress-legend {
+        font-size: 14px;
     }
 
     /* END ALL TASK BY STATUS */
@@ -221,19 +236,23 @@
     .invoice-legend-low {
         width: 10px;
         height: 10px;
-        background: #40B3A2;
+        background: #b7c9a1;
     }
 
     .invoice-legend-medium {
         width: 10px;
         height: 10px;
-        background: #31668E;
+        background: #30aac2;
     }
 
     .invoice-legend-high {
         width: 10px;
         height: 10px;
-        background: #242582;
+        background: #3585b8;
+    }
+
+    .invoice-progress div.progress-task {
+        font-size: 10px;
     }
 
     /* END INVOICE */
@@ -260,6 +279,14 @@
 
     /* END TASK COMPLETED */
 
+    /* INVOICE */
+
+    .invoice-progress div.progress-task {
+        font-size: 12px;
+    }
+
+    /* END INVOICE */
+
     /* WEEK PROGRESS */
 
     .info-project .col-md-7.week-progress {
@@ -271,19 +298,231 @@
     }
 
     .week-progress-content {
-        height: 50%;
+        height: 60%;
+        width: 80vw;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        /* background: #C2C9CF; */
+        overflow: hidden;
+    }
+
+    .week-progress-content small {
+        position: absolute;
+        margin-top: -38px;
+        color: black;
+        font-size: 12px;
+        margin-right: -30px;
+        transform: rotate(90deg);
+    }
+
+    .week-progress-content small.this-week {
+        font-size: 12px;
     }
 
     .week-point {
         position: relative;
-        z-index: 5;
+        z-index: 3;
         width: 20px;
         height: 20px;
         border-radius: 100%;
         background: #242582;
     }
 
+    .week-point.ml-n3 {
+        margin-left: -1.2rem !important;
+    }
+
+    .week-point.week-point-progress::before {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 5;
+        width: 10px;
+        height: 10px;
+        background: #b7c9a1;
+        border-radius: 100%;
+        margin-top: 5px;
+        margin-left: 4px;
+    }
+
+    .week-point.week-point-due::before {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 5;
+        width: 10px;
+        height: 10px;
+        background: #242582;
+        border-radius: 100%;
+        margin-top: 5px;
+        margin-left: 4px;
+    }
+
+    .week-point.week-point-completed::before {
+        content: '';
+        position: absolute;
+        display: block;
+        z-index: 5;
+        width: 10px;
+        height: 10px;
+        background: #31668E;
+        border-radius: 100%;
+        margin-top: 5px;
+        margin-left: 4px;
+    }
+
+    .week-progress .row {
+        min-height: unset;
+    }
+
+    .week-progress-legend .progress-line {
+        background: #b7c9a1;
+        width: 30px;
+        height: 5px;
+    }
+
+    .progress-line .progress-point {
+        background: #b7c9a1;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+    }
+
+    .week-progress-legend .due-line {
+        background: #242582;
+        width: 30px;
+        height: 5px;
+    }
+
+    .due-line .due-point {
+        background: #242582;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+    }
+
+    .week-progress-legend .completed-line {
+        background: #31668E;
+        width: 30px;
+        height: 5px;
+    }
+
+    .completed-line .completed-point {
+        background: #31668E;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+    }
+
+    .week-progress .col-md-3 {
+        box-shadow: unset;
+    }
+
+    .week-progress-legend span {
+        font-size: 10px;
+        /* margin-top: -3px; */
+    }
+
     /* END WEEK PROGRESS */
+
+    /* PROJECT TIMELINES */
+
+    .project-timelines,
+    .resource-workload {
+        min-height: 70vh;
+        max-height: 70vh;
+        background: #fff;
+        margin: 2% 1%;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .project-timelines .date-content {
+        min-height: 14vh;
+    }
+
+    .date-content span {
+        display: block;
+        width: 60px;
+        transform: rotate(270deg);
+        font-size: 9px;
+    }
+
+    .date-content .col {
+        -ms-flex: 0 0 9.09%;
+        flex: 0 0 9.09%;
+        max-width: 9.09%;
+    }
+
+    .timelines-progress .progress-bar {
+        /* position: absolute; */
+        width: 0%;
+        /* max-width: 70%; */
+        height: 15px;
+        background: linear-gradient(to right, #27a1b8, #9bc09f);
+        background: -webkit-linear-gradient(left, #27a1b8, #9bc09f);
+        background: -o-linear-gradient(right, #27a1b8, #9bc09f);
+        background: -moz-linear-gradient(right, #27a1b8, #9bc09f);
+    }
+
+    .timelines-progress span {
+        color: #000;
+        background: #fff;
+        font-size: 8px;
+        margin-left: -110px;
+    }
+
+    .project-timelines .row {
+        min-height: unset;
+    }
+
+    .timelines-progress .col-3 {
+        min-height: unset;
+    }
+
+    .progress-place {
+        margin: 5px 0px;
+    }
+
+    /* END PROJECT TIMELINES */
+
+    /* RESOURCE WORKLOAD */
+
+    .resource-workload .row,
+    .resource-workload .col-3 {
+        min-height: unset;
+    }
+
+    .resource-workload .col-3 {
+        -ms-flex: 0 0 27%;
+        flex: 0 0 27%;
+        max-width: 27%;
+        padding: 0px 0px;
+    }
+
+    .resource-workload .col-1 {
+        -ms-flex: 0 0 0.9%;
+        flex: 0 0 0.9%;
+        max-width: 0.9%;
+    }
+
+    .resource-workload .col-8 {
+        -ms-flex: 0 0 66%;
+        flex: 0 0 66%;
+        max-width: 66%;
+    }
+
+    .progress-resource {
+        width: 0%;
+        background: linear-gradient(to right, #c4778b, #e4b77c);
+        background: -webkit-linear-gradient(left, #c4778b, #e4b77c);
+        background: -o-linear-gradient(right, #c4778b, #e4b77c);
+        background: -moz-linear-gradient(right, #c4778b, #e4b77c);
+        height: 10px;
+    }
+
+    /* END RESOURCE WORKLOAD */
 
     /* END MAIN */
 
@@ -374,7 +613,65 @@
         margin: 0px 1%;
     }
 
+    .week-progress-content {
+        width: unset;
+        margin-top: unset;
+        transform: unset;
+    }
+
+    .week-progress-content small {
+        position: absolute;
+        margin-top: 21px;
+        color: black;
+        font-size: 12px;
+        margin-right: -30px;
+        transform: unset;
+    }
+
+    .week-progress-content small.this-week {
+        font-size: 10px;
+    }
+
     /* END WEEK PROGRESS */
+
+    /* PROJECT TIMELINES */
+
+    .project-timelines {
+        -ms-flex: 0 0 62.5%;
+        flex: 0 0 62.5%;
+        max-width: 62.5%;
+    }
+
+    .date-content span {
+        display: block;
+        width: 60px;
+        transform: rotate(270deg);
+        font-size: 11px;
+    }
+
+    .timelines-progress span {
+        color: #000;
+        background: #fff;
+        font-size: 11px;
+        margin-left: -120px;
+    }
+
+
+    /* END PROJECT TIMELINES */
+
+    /* RESOURCE WORKLOAD */
+    .resource-workload .col-3 {
+        -ms-flex: 0 0 27%;
+        flex: 0 0 27%;
+        max-width: 27%;
+        padding: 4px 0px;
+    }
+
+    .resource-workload span {
+        font-size: 9px;
+    }
+
+    /* END RESOURCE WORKLOAD */
 
     /* END MAIN */
 
@@ -408,4 +705,14 @@
 
 
     /* END PROJECT MONITOR */
+
+    /* PROJECT TIMELINES */
+
+    /* RESOURCE WORKLOAD */
+    .resource-workload span {
+        font-size: 11px;
+    }
+
+    /* END RESOURCE WORKLOAD */
+
 }

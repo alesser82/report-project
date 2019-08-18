@@ -96,6 +96,10 @@
                     <div class="progress-content d-flex justify-content-center align-items-center"></div>
                     <div class="row progress-legend">
                         <div class="col-4 d-flex progress-legend">
+                            <div class="legend-icon-open"></div>
+                            <small class="mt-n1 ml-2">Open</small>
+                        </div>
+                        <div class="col-4 d-flex progress-legend">
                             <div class="legend-icon-inprogress"></div>
                             <small class="mt-n1 ml-2">InProgress</small>
                         </div>
@@ -103,19 +107,19 @@
                             <div class="legend-icon-completed"></div>
                             <small class="mt-n1 ml-2">Completed</small>
                         </div>
-                        <div class="col-4 d-flex progress-legend">
+                        <div class="mt-1 col-3 d-flex progress-legend justify-content-center">
                             <div class="legend-icon-onhold"></div>
                             <small class="mt-n1 ml-2">OnHold</small>
                         </div>
-                        <div class="col-4 d-flex progress-legend">
+                        <div class="mt-1 col-3 d-flex progress-legend justify-content-center">
                             <div class="legend-icon-cancelled"></div>
                             <small class="mt-n1 ml-2">Cancelled</small>
                         </div>
-                        <div class="col-4 d-flex progress-legend">
+                        <div class="mt-1 col-3 d-flex progress-legend justify-content-center">
                             <div class="legend-icon-other"></div>
                             <small class="mt-n1 ml-2">Other</small>
                         </div>
-                        <div class="col-4 d-flex progress-legend">
+                        <div class="mt-1 col-3 d-flex progress-legend justify-content-center">
                             <div class="legend-icon-overdue"></div>
                             <small class="mt-n1 ml-2">Overdue</small>
                         </div>
@@ -161,14 +165,161 @@
                 <!-- WEEK PROGRESS -->
 
                 <div class="col-md-7 week-progress mt-3">
-                    <h4 class="text-uppercase title-progress">-3 weeks | this week | +7 weeks</h4>
-                    <div class="week-progress-content d-flex align-items-end mx-4">
-                        <div class="week-point mb-n2"></div>
-                        <!-- <div class="week-point-2 mb-n2"></div> -->
+                    <h4 class="text-uppercase title-progress">-3 weeks | this week | +6 weeks</h4>
+                    <div class="week-progress-content d-flex align-items-end">
+                    </div>
+                    <div class="row week-progress-legend px-3">
+                        <div class="col-md-4 d-inline-flex align-content-center">
+                            <div class="d-flex due-line justify-content-center mt-1">
+                                <div class="due-point mt-n1"></div>
+                            </div>
+                            <span class="text-uppercase ml-1">task due</span>
+                        </div>
+                        <div class="col-md-4 d-inline-flex align-content-center">
+                            <div class="d-flex completed-line justify-content-center mt-1">
+                                <div class="completed-point mt-n1"></div>
+                            </div>
+                            <span class="text-uppercase ml-1">task completed</span>
+                        </div>
+                        <div class="col-md-4 d-inline-flex">
+                            <div class="d-flex progress-line justify-content-center mt-1">
+                                <div class="progress-point mt-n1"></div>
+                            </div>
+                            <span class="text-uppercase ml-1">task in progress</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- END WEEK PROGRESS -->
+
+                <!-- PROJECT TIMELINES -->
+
+                <div class="col-md-8 project-timelines">
+                    <h4 class="text-uppercase title-progress">project timelines</h4>
+                    <div class="row project-timelines-content">
+                        <div class="col-12 date-content border-bottom border-secondary p-0 d-flex">
+                            <div class="row">
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">15-Jul-15</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">31-Jan-16</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">18-Aug-16</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">6-Mar-17</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">22-Sep-17</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">10-Apr-18</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">27-Oct-18</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">15-May-19</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">1-Dec-19</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">18-Jun-20</span>
+                                </div>
+                                <div class="col d-flex align-items-center p-0">
+                                    <span class="text-secondary font-weight-normal">4-Jan-21</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 timelines-progress px-3 mt-2">
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Pipanisasi 1-Jan-17</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 2; 10-Jul-17</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 3; 10-Oct-17</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 4; 1-Jan-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 5; 5-Jan-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 6; 10-Jan-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 7; 26-Jul-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 8; 22-Sept-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 9; 21-Nov-18</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 10; 20-Jan-19</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 11; 20-Mar-19</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="row progress-place">
+                                <div class="col-12 p-0">
+                                    <span class="d-block position-absolute">Project Title 12; 20-May-19</span>
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END PROJECT TIMELINES -->
+
+                <!-- RESOURCE WORKLOAD -->
+
+                <div class="col-md-4 resource-workload">
+                    <h4 class="text-uppercase title-progress">resource workload</h4>
+                </div>
+
+                <!-- END RESOURCE WORKLOAD -->
             </div>
         </div>
     </main>
